@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+  chatgpt-plugin-starter:
+    container_name: chatgpt-plugin-starter
+    image: "launcher.azurecr.io/chatgpt-plugin-starter:1"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:5003"
