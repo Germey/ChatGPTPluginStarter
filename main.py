@@ -1,5 +1,4 @@
 import json
-
 import quart
 import quart_cors
 from quart import request, send_file
@@ -9,16 +8,6 @@ app = quart_cors.cors(quart.Quart(__name__),
 
 # Keep track of todo's. Does not persist if Python session is restarted.
 _TODOS = {}
-
-
-@app.route("/openapi.yaml")
-async def openapi():
-    return open("./openapi.yaml").read()
-
-
-@app.route("/.well-known/ai-plugin.json")
-async def ai_plugin():
-    return open("./.well-known/ai-plugin.json").read()
 
 
 @app.post("/todos/<string:username>")

@@ -2,7 +2,7 @@ version: "3.0"
 services:
   chatgpt-plugin-starter:
     container_name: chatgpt-plugin-starter
-    image: "germey/chatgpt-plugin-starter:1"
+    image: "germey/chatgpt-plugin-starter:2"
     build:
       context: .
       dockerfile: Dockerfile
